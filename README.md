@@ -4,6 +4,9 @@ My aquaplus-sources mod for ToHeart 2 XRATED
 ## How to build  
 * With VS2010 only, VS2013 may be ok  
 
+## Key code  
+* search Main_Loop()  
+
 ## Ref  
 * aquaplus-sources  
 http://leaf.aquaplus.co.jp/product/xvid.html  
