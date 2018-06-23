@@ -1,0 +1,69 @@
+﻿
+GM_AvgMsg.h - 人名输入
+
+Font.cpp - 字体FontPoint
+
+WinMain.cpp - 时间
+
+
+-----------------
+escript.cpp
+	int ESC_OprControl( int opr )
+	static BOOL EXEC_CallOprControl( int mode ) <- while循环执行
+	static int EXEC_ControlTask( int mode )
+	int EXEC_ControlLang( EXEC_DATA *scr )
+main.cpp
+	void MAIN_SystemControl( void )
+	void MAIN_Loop( void )
+	
+	
+escrpit.h
+	EXEC_DATA; EXEC_LangInfo;
+	
+EXEC_LangInfo:
+	->pc 
+		当前buffer位置
+	EXEC_LangBuf 
+		当前buffer
+	EScroptOpr[opr].type 
+		GetScriptParamControl的参数类型，共15个参数
+		根据这个类型读取不同长度的参数
+		返回值是读取的字节数（包括opr的双字节）
+		注意opr需要偏移-64
+	EscParam[i].num
+		参数为long，或者存放双字节高低字节比较的结果（0或1）
+	EscParam[i].str
+		参数为char[1024]
+	scr->BusyFlg
+		sc code状态
+	NowLangFileName
+		当前脚本名称（EV_0301MORNING.sdt）
+	
+EXEC_LangBuf:
+	WORD opr 当前操作数（双字节）
+	
+
+EXEC_ReadLang
+	typedef struct {
+		short			h1, h2;  -> 魔法数：L, F
+		long			Fsize; -> LangBuf的大小是Fsize - sizeof(SCRIPT_HEADER)
+		unsigned long	BlockAddres[ SCRIPT_BLOCK_MAX ]; ->复制到scr->BlockAddres
+	} SCRIPT_HEADER;
+	LangBuf 脚本buffer
+-------------------------------
+
+int ESC_OprControl( int opr )
+{
+	int	i=ESC_LOADSCRIPT;
+	EscCnt = GetScriptParamControl( opr );
+	switch( opr ) 
+	{
+		case ESC_B:					
+			ESC_EOprB();			
+			break;	
+			
+		。。。
+	}
+	SetScriptRegisterControl( opr );
+	return EScroptOpr[opr-64].ret;
+}

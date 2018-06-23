@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EB7B7C9F-BA5C-48E0-8454-C869ACAB9997}</ProjectGuid>
+    <RootNamespace>ToHeart2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/ToHeart2.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\my_inc2;..\..\XViD\XVidDec;..\..\OGG\oggDec;..\..\OGG\vorbis\include\vorbis;..\..\OGG\ogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\Release/ToHeart2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0411</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;vfw32.lib;msacm32.lib;dsound.lib;dxguid.lib;winmm.lib;comctl32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Release/ScriptEngine.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/ToHeart2.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\my_inc2;..\..\XViD\XVidDec;..\..\OGG\oggDec;..\..\OGG\vorbis\include\vorbis;..\..\OGG\ogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>.\Debug/ToHeart2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0411</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>vfw32.lib;msacm32.lib;dsound.lib;winmm.lib;comctl32.lib;odbc32.lib;odbccp32.lib;ddraw.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)/../../dxsdk_sum2004/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/ScriptEngine.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\bmp.cpp" />
+    <ClCompile Include="src\calc.cpp" />
+    <ClCompile Include="src\comp_bmpPac.cpp" />
+    <ClCompile Include="src\comp_lzs.cpp" />
+    <ClCompile Include="src\comp_pac.cpp" />
+    <ClCompile Include="src\ctrl.cpp" />
+    <ClCompile Include="src\disp.cpp" />
+    <ClCompile Include="src\dispsprite.cpp" />
+    <ClCompile Include="src\draw.cpp" />
+    <ClCompile Include="src\draw08.cpp" />
+    <ClCompile Include="src\draw16.cpp" />
+    <ClCompile Include="src\draw24.cpp" />
+    <ClCompile Include="src\draw32.cpp" />
+    <ClCompile Include="src\drawprim16.cpp" />
+    <ClCompile Include="src\drawprim24.cpp" />
+    <ClCompile Include="src\drawprim32.cpp" />
+    <ClCompile Include="src\enum.cpp" />
+    <ClCompile Include="src\escr.cpp" />
+    <ClCompile Include="src\escript.cpp" />
+    <ClCompile Include="src\exec.cpp" />
+    <ClCompile Include="src\font.cpp" />
+    <ClCompile Include="src\gm_avg.cpp" />
+    <ClCompile Include="src\gm_avgback.cpp" />
+    <ClCompile Include="src\gm_avgchar.cpp" />
+    <ClCompile Include="src\gm_avgchip.cpp" />
+    <ClCompile Include="src\gm_avgending.cpp" />
+    <ClCompile Include="src\gm_avgmsg.cpp" />
+    <ClCompile Include="src\gm_demo.cpp" />
+    <ClCompile Include="src\gm_omake.cpp" />
+    <ClCompile Include="src\gm_save.cpp" />
+    <ClCompile Include="src\gm_title.cpp" />
+    <ClCompile Include="src\gm_window.cpp" />
+    <ClCompile Include="src\keyboard.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mm_std.cpp" />
+    <ClCompile Include="src\mouse.cpp" />
+    <ClCompile Include="src\movie.cpp" />
+    <ClCompile Include="src\movplayer.cpp" />
+    <ClCompile Include="src\palette.cpp" />
+    <ClCompile Include="src\param.cpp" />
+    <ClCompile Include="src\readfile.cpp" />
+    <ClCompile Include="src\soundds.cpp" />
+    <ClCompile Include="src\text.cpp" />
+    <ClCompile Include="src\tga.cpp" />
+    <ClCompile Include="src\winmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\bmp.h" />
+    <ClInclude Include="src\calc.h" />
+    <ClInclude Include="src\clcommon.h" />
+    <ClInclude Include="src\comp_bmpPac.h" />
+    <ClInclude Include="src\comp_lzs.h" />
+    <ClInclude Include="src\comp_pac.h" />
+    <ClInclude Include="src\ctrl.h" />
+    <ClInclude Include="src\disp.h" />
+    <ClInclude Include="src\dispsprite.h" />
+    <ClInclude Include="src\draw.h" />
+    <ClInclude Include="src\drawprim.h" />
+    <ClInclude Include="src\enum.h" />
+    <ClInclude Include="src\escr.h" />
+    <ClInclude Include="src\escript.h" />
+    <ClInclude Include="src\exec.h" />
+    <ClInclude Include="src\font.h" />
+    <ClInclude Include="src\gm_avg.h" />
+    <ClInclude Include="src\gm_avgback.h" />
+    <ClInclude Include="src\gm_avgChar.h" />
+    <ClInclude Include="src\gm_avgchip.h" />
+    <ClInclude Include="src\gm_avgending.h" />
+    <ClInclude Include="src\gm_avgmsg.h" />
+    <ClInclude Include="src\gm_demo.h" />
+    <ClInclude Include="src\gm_omake.h" />
+    <ClInclude Include="src\gm_save.h" />
+    <ClInclude Include="src\gm_title.h" />
+    <ClInclude Include="src\gm_window.h" />
+    <ClInclude Include="src\keyboard.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\mm_std.h" />
+    <ClInclude Include="src\mouse.h" />
+    <ClInclude Include="src\movie.h" />
+    <ClInclude Include="src\movplayer.h" />
+    <ClInclude Include="src\palette.h" />
+    <ClInclude Include="src\param.h" />
+    <ClInclude Include="src\readfile.h" />
+    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\soundds.h" />
+    <ClInclude Include="src\text.h" />
+    <ClInclude Include="src\tga.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\bitmap1.bmp" />
+    <None Include="src\cursor1.cur" />
+    <None Include="src\t2_256.ico" />
+    <None Include="src\changed.txt" />
+    <None Include="src\scr_name.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\script1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OGG\oggDec\oggDec.vcxproj">
+      <Project>{22e113db-e259-4516-a958-43485e38e40a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OGG\ogg_static\ogg_static.vcxproj">
+      <Project>{f0da9ce2-a3a2-4edf-a246-1eb909bf24d1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OGG\vorbis_static\vorbis_static.vcxproj">
+      <Project>{e4e14c2d-53d1-4b62-9110-b8f7ac54b1ea}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XViD\XVidDec\XviDDec.vcxproj">
+      <Project>{2ef3e0bd-3670-4ec2-b6b6-2a7ecca6fe03}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
